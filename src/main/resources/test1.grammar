@@ -1,0 +1,31 @@
+program
+
+function string isPalindrome(string str) {
+    string reversed = "";
+    for (int i = str.len; i > 0; i--) {
+        reversed = reversed + str[i];
+    }
+
+    if(str == reversed) then
+        return print(str + " is palindrome");
+    else
+        return print(str + " is not palindrome");
+}
+
+begin
+    string one = "ex";
+    string two = "ample";
+    string str = "lang" + "uage";
+
+    print(one + two);
+    print(str - two);
+
+    char ch = (char) str;
+    string[] array = {one, two, str};
+
+    string notPalindrome = "not palindrome";
+    string palindrome = one + "e";
+
+    print(isPalindrome(notPalindrome));
+    print(isPalindrome(palindrome));
+end
