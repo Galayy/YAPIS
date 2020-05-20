@@ -3,15 +3,35 @@ plugins {
     id 'antlr'
 }
 
-group 'org.example'
+group 'com.yapis'
 version '1.0-SNAPSHOT'
+
+ext {
+    antlrVersion = "4.8"
+    guavaVersion = "23.0"
+    junitVersion = "4.12"
+    lombokVersion = "1.18.12"
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    antlr "org.antlr:antlr4:4.5"
+    antlr "org.antlr:antlr4:$antlrVersion"
 
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    compile "com.google.guava:guava:$guavaVersion"
+    compile "org.antlr:antlr4-runtime:$antlrVersion"
+
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+
+    testCompile "junit:junit:$junitVersion"
 }

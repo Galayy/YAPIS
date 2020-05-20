@@ -1,0 +1,23 @@
+program
+    begin
+        int a = 1;
+        int b = 3;
+
+        String firstCase = "first";
+        String secondCase = "second";
+        String defaultCase = "undefined";
+
+        switch (firstCase) {
+            case "first": print(firstCase);
+            break;
+            case "second": print(secondCase);
+            break;
+            default: print(defaultCase);
+            break;
+        }
+
+        block someBlock {
+            int c = a + 10*b;
+            print(c);
+        }
+    end

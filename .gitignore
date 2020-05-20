@@ -1,2 +1,6 @@
 .gradle
 .idea
+build
+
+src/main/java/com.yapis.compile/
+src/main/java/com.yapis.gen/

@@ -1,31 +1,21 @@
 program
 
-function string isPalindrome(string str) {
-    string reversed = "";
-    for (int i = str.len; i > 0; i--) {
-        reversed = reversed + str[i];
-    }
+    begin
 
-    if(str == reversed) then
-        return print(str + " is palindrome");
-    else
-        return print(str + " is not palindrome");
-}
+        int a = 1;
+        int b = 2;
 
-begin
-    string one = "ex";
-    string two = "ample";
-    string str = "lang" + "uage";
+        if (a == b) {
+            a=0;
+        } else {
+            print(b);
+            a= 0;
+        }
 
-    print(one + two);
-    print(str - two);
+        while (a > b) {
+            int c = b + 1;
+            a=c;
+            print(a);
+        }
 
-    char ch = (char) str;
-    string[] array = {one, two, str};
-
-    string notPalindrome = "not palindrome";
-    string palindrome = one + "e";
-
-    print(isPalindrome(notPalindrome));
-    print(isPalindrome(palindrome));
-end
+    end
